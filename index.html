@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
-    <!-- Chosen Palette: Primary Blue (#225479), Accent Blue (#1a4260, #3a6b9a), Warm Neutral (Amber-500), Base Neutrals (Stone) -->
+    <!-- Chosen Palette: Primary Blue (#225479), Accent Blue (#1a4260, #3a6b9a), Warm Neutral (Amber-500), Base Neutrals (Stone), Accent Yellow (#E3D263) -->
     <!-- Application Structure Plan: The SPA is designed as a 'Process-Centric Interactive Journey'. Instead of a static list, it features a central, clickable process flow diagram representing the 6 stages of a property sale. Clicking a stage dynamically updates a detail area, allowing users to explore the services at their own pace. This is more engaging and less overwhelming than a long text document. The structure is supported by a key advantages section. This architecture transforms a procedural document into an interactive, user-controlled experience that builds confidence in the service. -->
     <!-- Visualization & Content Choices: 1. Report Info: 6-stage sales process. Goal: Organize/Interact. Viz/Method: Interactive flowchart built with HTML/CSS/JS. Interaction: User clicks a stage to reveal details. Justification: Breaks down complex process into manageable, interactive steps. Library: Vanilla JS. 2. Report Info: Detailed services for each stage. Goal: Inform. Viz/Method: Dynamic text block. Interaction: Content updates on click from the flowchart. Justification: Prevents information overload. Library: Vanilla JS. 3. Report Info: Key Advantages. Goal: Inform. Viz/Method: Styled cards. Interaction: Minimal hover effect. Justification: Highlights core value propositions clearly. Library: N/A. -->
     <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
@@ -40,15 +40,15 @@
 
         <header class="text-center mb-12 md:mb-16">
             <img src="logo.jpg" alt="VIVABIEN PROPIEDADES Logo" class="mx-auto mb-4 w-32 h-auto rounded-full shadow-lg" onerror="this.onerror=null;this.src='https://placehold.co/128x128/d6d3d1/78716c?text=Logo';">
-            <h1 class="text-4xl md:text-5xl font-bold text-[#225479] mb-2">VIVABIEN PROPIEDADES</h1>
-            <p class="text-lg md:text-xl text-stone-600">Su Tranquilidad y Éxito Inmobiliario: Nuestro Compromiso Profesional.</p>
+            <h1 class="text-4xl md:text-5xl font-bold text-[#E3D263] mb-2">VIVABIEN PROPIEDADES</h1>
+            <p class="text-lg md:text-xl text-white">Su Tranquilidad y Éxito Inmobiliario: Nuestro Compromiso Profesional.</p>
         </header>
 
         <main>
             <section id="team" class="mb-16 md:mb-24">
                 <div class="text-center mb-10">
-                    <h2 class="text-3xl font-bold mb-2">Nuestro Equipo de Venta</h2>
-                    <p class="text-stone-600 max-w-3xl mx-auto">Conozca a los profesionales que harán posible su éxito inmobiliario. Somos 4 expertos dedicados a brindarle el mejor servicio.</p>
+                    <h2 class="text-3xl font-bold text-[#E3D263] mb-2">Nuestro Equipo de Venta</h2>
+                    <p class="text-white max-w-3xl mx-auto">Conozca a los profesionales que harán posible su éxito inmobiliario. Somos 4 expertos dedicados a brindarle el mejor servicio.</p>
                 </div>
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
                     <!-- Miembro 1 -->
@@ -88,33 +88,33 @@
 
             <section id="interactive-process" class="mb-16 md:mb-24">
                 <div class="text-center mb-10">
-                    <h2 class="text-3xl font-bold mb-2">Nuestro Proceso de Venta Integral</h2>
-                    <p class="text-stone-600 max-w-3xl mx-auto">Descubra el Camino Hacia una Venta Exitosa y Sin Preocupaciones. Cada paso de nuestro proceso está diseñado para su tranquilidad. Explore cómo lo logramos.</p>
+                    <h2 class="text-3xl font-bold text-[#E3D263] mb-2">Nuestro Proceso de Venta Integral</h2>
+                    <p class="text-white max-w-3xl mx-auto">Descubra el Camino Hacia una Venta Exitosa y Sin Preocupaciones. Cada paso de nuestro proceso está diseñado para su tranquilidad. Explore cómo lo logramos.</p>
                 </div>
 
                 <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 md:gap-6 mb-8">
                     <div id="step-1" class="process-step text-center p-4 bg-white rounded-xl shadow-md cursor-pointer transition-all duration-300 hover:shadow-lg hover:-translate-y-1 border-b-4 border-[#3a6b9a]">
-                        <div class="text-3xl mb-2">1</div>
+                        <div class="text-4xl mb-2">1</div>
                         <h3 class="font-bold text-stone-700">Asesoría Inicial</h3>
                     </div>
                     <div id="step-2" class="process-step text-center p-4 bg-white rounded-xl shadow-md cursor-pointer transition-all duration-300 hover:shadow-lg hover:-translate-y-1 border-b-4 border-[#3a6b9a]">
-                        <div class="text-3xl mb-2">2</div>
+                        <div class="text-4xl mb-2">2</div>
                         <h3 class="font-bold text-stone-700">Preparación</h3>
                     </div>
                     <div id="step-3" class="process-step text-center p-4 bg-white rounded-xl shadow-md cursor-pointer transition-all duration-300 hover:shadow-lg hover:-translate-y-1 border-b-4 border-[#3a6b9a]">
-                        <div class="text-3xl mb-2">3</div>
+                        <div class="text-4xl mb-2">3</div>
                         <h3 class="font-bold text-stone-700">Comercialización</h3>
                     </div>
                     <div id="step-4" class="process-step text-center p-4 bg-white rounded-xl shadow-md cursor-pointer transition-all duration-300 hover:shadow-lg hover:-translate-y-1 border-b-4 border-[#3a6b9a]">
-                        <div class="text-3xl mb-2">4</div>
+                        <div class="text-4xl mb-2">4</div>
                         <h3 class="font-bold text-stone-700">Gestión</h3>
                     </div>
                     <div id="step-5" class="process-step text-center p-4 bg-white rounded-xl shadow-md cursor-pointer transition-all duration-300 hover:shadow-lg hover:-translate-y-1 border-b-4 border-[#3a6b9a]">
-                        <div class="text-3xl mb-2">5</div>
+                        <div class="text-4xl mb-2">5</div>
                         <h3 class="font-bold text-stone-700">Cierre</h3>
                     </div>
                     <div id="step-6" class="process-step text-center p-4 bg-white rounded-xl shadow-md cursor-pointer transition-all duration-300 hover:shadow-lg hover:-translate-y-1 border-b-4 border-[#3a6b9a]">
-                        <div class="text-3xl mb-2">6</div>
+                        <div class="text-4xl mb-2">6</div>
                         <h3 class="font-bold text-stone-700">Postventa</h3>
                     </div>
                 </div>
@@ -125,8 +125,8 @@
 
             <section id="advantages" class="mb-16 md:mb-24">
                 <div class="text-center mb-10">
-                    <h2 class="text-3xl font-bold mb-2">Ventajas Clave de Nuestro Servicio</h2>
-                     <p class="text-stone-600 max-w-3xl mx-auto">Nuestro compromiso va más allá de una simple transacción. Nos enfocamos en construir relaciones de confianza a través de un servicio que se distingue por su calidad y dedicación.</p>
+                    <h2 class="text-3xl font-bold text-[#E3D263] mb-2">Ventajas Clave de Nuestro Servicio</h2>
+                     <p class="text-white max-w-3xl mx-auto">Nuestro compromiso va más allá de una simple transacción. Nos enfocamos en construir relaciones de confianza a través de un servicio que se distingue por su calidad y dedicación.</p>
                 </div>
                 <div class="grid md:grid-cols-3 gap-8">
                     <div class="bg-white p-6 rounded-xl shadow-md text-center">
@@ -150,7 +150,7 @@
         </main>
 
         <footer class="text-center mt-16 md:mt-24 pt-8 border-t border-stone-200">
-            <p class="text-stone-500">&copy; 2024 VIVABIEN PROPIEDADES. Todos los derechos reservados.</p>
+            <p class="text-white">&copy; 2024 VIVABIEN PROPIEDADES. Todos los derechos reservados.</p>
         </footer>
 
     </div>
