@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VIVABIEN PROPIEDADES - Alcance de Servicio de Venta</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- Chosen Palette: Primary Blue (#225479), Accent Blue (#1a4260, #3a6b9a), Warm Neutral (Amber-500), Base Neutrals (Stone) -->
+    <!-- Application Structure Plan: The SPA is designed as a 'Process-Centric Interactive Journey'. Instead of a static list, it features a central, clickable process flow diagram representing the 6 stages of a property sale. Clicking a stage dynamically updates a detail area, allowing users to explore the services at their own pace. This is more engaging and less overwhelming than a long text document. The structure is supported by a key advantages section. This architecture transforms a procedural document into an interactive, user-controlled experience that builds confidence in the service. -->
+    <!-- Visualization & Content Choices: 1. Report Info: 6-stage sales process. Goal: Organize/Interact. Viz/Method: Interactive flowchart built with HTML/CSS/JS. Interaction: User clicks a stage to reveal details. Justification: Breaks down complex process into manageable, interactive steps. Library: Vanilla JS. 2. Report Info: Detailed services for each stage. Goal: Inform. Viz/Method: Dynamic text block. Interaction: Content updates on click from the flowchart. Justification: Prevents information overload. Library: Vanilla JS. 3. Report Info: Key Advantages. Goal: Inform. Viz/Method: Styled cards. Interaction: Minimal hover effect. Justification: Highlights core value propositions clearly. Library: N/A. -->
+    <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f5f5f4; /* stone-100 as fallback */
+            background-image: url('https://images.unsplash.com/photo-1582268715760-b8e7343e06cf?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'); /* Abstract modern interior */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed; /* Optional: for parallax-like effect */
+        }
+        .process-step-active {
+            background-color: #1a4260 !important; /* Derived dark blue from #225479 */
+            color: #ffffff !important;
+            transform: translateY(-4px);
+            box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+        }
+        .process-step-active h3 {
+            color: #ffffff !important;
+        }
+    </style>
+</head>
+<body class="text-stone-800">
+
+    <div class="container mx-auto max-w-6xl p-4 sm:p-6 lg:p-8">
+
+        <header class="text-center mb-12 md:mb-16">
+            <img src="logo.jpg" alt="VIVABIEN PROPIEDADES Logo" class="mx-auto mb-4 w-32 h-auto rounded-full shadow-lg" onerror="this.onerror=null;this.src='https://placehold.co/128x128/d6d3d1/78716c?text=Logo';">
+            <h1 class="text-4xl md:text-5xl font-bold text-[#225479] mb-2">VIVABIEN PROPIEDADES</h1>
+            <p class="text-lg md:text-xl text-stone-600">Su Tranquilidad y Éxito Inmobiliario: Nuestro Compromiso Profesional.</p>
+        </header>
+
+        <main>
+            <section id="team" class="mb-16 md:mb-24">
+                <div class="text-center mb-10">
+                    <h2 class="text-3xl font-bold mb-2">Nuestro Equipo de Venta</h2>
+                    <p class="text-stone-600 max-w-3xl mx-auto">Conozca a los profesionales que harán posible su éxito inmobiliario. Somos 4 expertos dedicados a brindarle el mejor servicio.</p>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <!-- Miembro 1 -->
+                    <div class="bg-white p-6 rounded-xl shadow-md text-center flex flex-col items-center">
+                        <img src="https://placehold.co/150x150/e0e0e0/ffffff?text=Camila+V" alt="Foto Miembro del Equipo 1" class="w-36 h-36 rounded-full object-cover mb-4 border-4 border-[#225479]">
+                        <h3 class="text-xl font-bold text-[#225479] mb-2">Camila Vega David</h3>
+                        <p class="text-stone-700 text-sm mb-1">Agente Inmobiliario</p>
+                        <p class="text-stone-700 text-sm mb-1">📞 +56989424104</p>
+                        <p class="text-stone-700 text-sm">📧 camila.vega@vivabien.cl</p>
+                    </div>
+                    <!-- Miembro 2 -->
+                    <div class="bg-white p-6 rounded-xl shadow-md text-center flex flex-col items-center">
+                        <img src="https://placehold.co/150x150/e0e0e0/ffffff?text=Catherine+M" alt="Foto Miembro del Equipo 2" class="w-36 h-36 rounded-full object-cover mb-4 border-4 border-[#225479]">
+                        <h3 class="text-xl font-bold text-[#225479] mb-2">Catherine Masaur Alarcón</h3>
+                        <p class="text-stone-700 text-sm mb-1">Agente Inmobiliario</p>
+                        <p class="text-stone-700 text-sm mb-1">📞 +56999450842</p>
+                        <p class="text-stone-700 text-sm">📧 catherine.masaur@vivabien.cl</p>
+                    </div>
+                    <!-- Miembro 3 -->
+                    <div class="bg-white p-6 rounded-xl shadow-md text-center flex flex-col items-center">
+                        <img src="https://placehold.co/150x150/e0e0e0/ffffff?text=Leonel+A" alt="Foto Miembro del Equipo 3" class="w-36 h-36 rounded-full object-cover mb-4 border-4 border-[#225479]">
+                        <h3 class="text-xl font-bold text-[#225479] mb-2">Leonel Abarca Tapia</h3>
+                        <p class="text-stone-700 text-sm mb-1">Agente Inmobiliario</p>
+                        <p class="text-stone-700 text-sm mb-1">📞 +56926223573</p>
+                        <p class="text-stone-700 text-sm">📧 leoabarca@vivabien.cl</p>
+                    </div>
+                    <!-- Miembro 4 -->
+                    <div class="bg-white p-6 rounded-xl shadow-md text-center flex flex-col items-center">
+                        <img src="https://placehold.co/150x150/e0e0e0/ffffff?text=Sergio+A" alt="Foto Miembro del Equipo 4" class="w-36 h-36 rounded-full object-cover mb-4 border-4 border-[#225479]">
+                        <h3 class="text-xl font-bold text-[#225479] mb-2">Sergio Aguilar Suárez</h3>
+                        <p class="text-stone-700 text-sm mb-1">Agente Inmobiliario</p>
+                        <p class="text-stone-700 text-sm mb-1">📞 +56978029454</p>
+                        <p class="text-stone-700 text-sm">📧 sergio.aguilar@vivabien.cl</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="interactive-process" class="mb-16 md:mb-24">
+                <div class="text-center mb-10">
+                    <h2 class="text-3xl font-bold mb-2">Nuestro Proceso de Venta Integral</h2>
+                    <p class="text-stone-600 max-w-3xl mx-auto">Descubra el Camino Hacia una Venta Exitosa y Sin Preocupaciones. Cada paso de nuestro proceso está diseñado para su tranquilidad. Explore cómo lo logramos.</p>
+                </div>
+
+                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 md:gap-6 mb-8">
+                    <div id="step-1" class="process-step text-center p-4 bg-white rounded-xl shadow-md cursor-pointer transition-all duration-300 hover:shadow-lg hover:-translate-y-1 border-b-4 border-[#3a6b9a]">
+                        <div class="text-3xl mb-2">1</div>
+                        <h3 class="font-bold text-stone-700">Asesoría Inicial</h3>
+                    </div>
+                    <div id="step-2" class="process-step text-center p-4 bg-white rounded-xl shadow-md cursor-pointer transition-all duration-300 hover:shadow-lg hover:-translate-y-1 border-b-4 border-[#3a6b9a]">
+                        <div class="text-3xl mb-2">2</div>
+                        <h3 class="font-bold text-stone-700">Preparación</h3>
+                    </div>
+                    <div id="step-3" class="process-step text-center p-4 bg-white rounded-xl shadow-md cursor-pointer transition-all duration-300 hover:shadow-lg hover:-translate-y-1 border-b-4 border-[#3a6b9a]">
+                        <div class="text-3xl mb-2">3</div>
+                        <h3 class="font-bold text-stone-700">Comercialización</h3>
+                    </div>
+                    <div id="step-4" class="process-step text-center p-4 bg-white rounded-xl shadow-md cursor-pointer transition-all duration-300 hover:shadow-lg hover:-translate-y-1 border-b-4 border-[#3a6b9a]">
+                        <div class="text-3xl mb-2">4</div>
+                        <h3 class="font-bold text-stone-700">Gestión</h3>
+                    </div>
+                    <div id="step-5" class="process-step text-center p-4 bg-white rounded-xl shadow-md cursor-pointer transition-all duration-300 hover:shadow-lg hover:-translate-y-1 border-b-4 border-[#3a6b9a]">
+                        <div class="text-3xl mb-2">5</div>
+                        <h3 class="font-bold text-stone-700">Cierre</h3>
+                    </div>
+                    <div id="step-6" class="process-step text-center p-4 bg-white rounded-xl shadow-md cursor-pointer transition-all duration-300 hover:shadow-lg hover:-translate-y-1 border-b-4 border-[#3a6b9a]">
+                        <div class="text-3xl mb-2">6</div>
+                        <h3 class="font-bold text-stone-700">Postventa</h3>
+                    </div>
+                </div>
+
+                <div id="details-container" class="bg-white p-6 md:p-8 rounded-2xl shadow-lg min-h-[20rem] transition-opacity duration-500">
+                </div>
+            </section>
+
+            <section id="advantages" class="mb-16 md:mb-24">
+                <div class="text-center mb-10">
+                    <h2 class="text-3xl font-bold mb-2">Ventajas Clave de Nuestro Servicio</h2>
+                     <p class="text-stone-600 max-w-3xl mx-auto">Nuestro compromiso va más allá de una simple transacción. Nos enfocamos en construir relaciones de confianza a través de un servicio que se distingue por su calidad y dedicación.</p>
+                </div>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="bg-white p-6 rounded-xl shadow-md text-center">
+                        <div class="text-3xl text-amber-500 mb-3">&#9733;</div>
+                        <h3 class="text-xl font-bold mb-2">Usted es Nuestra Prioridad</h3>
+                        <p class="text-stone-600">Reciba un acompañamiento cercano y adaptado, sintiéndose escuchado y seguro en cada decisión.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl shadow-md text-center">
+                        <div class="text-3xl text-amber-500 mb-3">&#128101;</div>
+                        <h3 class="text-xl font-bold mb-2">Conectando Oportunidades</h3>
+                        <p class="text-stone-600">Nuestra vasta red asegura que su propiedad sea vista por los compradores ideales, maximizando su potencial de venta.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl shadow-md text-center">
+                         <div class="text-3xl text-amber-500 mb-3">&#129309;</div>
+                        <h3 class="text-xl font-bold mb-2">Confianza en Cada Etapa</h3>
+                        <p class="text-stone-600">Con profesionalismo y transparencia inquebrantables, nos dedicamos a hacer su proceso de venta fluido y sin estrés.</p>
+                    </div>
+                </div>
+            </section>
+            
+        </main>
+
+        <footer class="text-center mt-16 md:mt-24 pt-8 border-t border-stone-200">
+            <p class="text-stone-500">&copy; 2024 VIVABIEN PROPIEDADES. Todos los derechos reservados.</p>
+        </footer>
+
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const serviceData = {
+                'step-1': {
+                    title: '1. Asesoría Inicial al Cliente',
+                    content: `
+                        <ul class="list-disc list-inside space-y-3 text-stone-700">
+                            <li><strong>Reunión Personalizada:</strong> Nos reunimos para conocer en profundidad sus necesidades, objetivos y las características únicas de su inmueble.</li>
+                            <li><strong>Análisis Comparativo de Mercado (ACM):</strong> Realizamos una evaluación exhaustiva del mercado actual para determinar un precio competitivo y atractivo.</li>
+                            <li><strong>Asesoramiento en Precio Óptimo:</strong> Le orientamos para fijar el mejor precio de venta posible, basado en datos reales del mercado para maximizar su retorno.</li>
+                        </ul>`
+                },
+                'step-2': {
+                    title: '2. Preparación y Promoción del Inmueble',
+                    content: `
+                        <ul class="list-disc list-inside space-y-3 text-stone-700">
+                            <li><strong>Revisión Legal y Documental:</strong> Verificamos que todos los documentos del inmueble (títulos, impuestos, etc.) estén en perfecto orden para una venta sin contratiempos.</li>
+                            <li><strong>Recomendaciones de Home Staging:</strong> Asesoramos sobre mejoras estéticas o funcionales que pueden aumentar significativamente el atractivo y valor de su propiedad.</li>
+                            <li><strong>Producción Multimedia Profesional:</strong> Creamos material de alto impacto, incluyendo fotografías profesionales, video tour y tomas con drone para destacar las mejores características del inmueble.</li>
+                        </ul>`
+                },
+                'step-3': {
+                    title: '3. Estrategia de Comercialización',
+                    content: `
+                        <ul class="list-disc list-inside space-y-3 text-stone-700">
+                            <li><strong>Publicación Masiva:</strong> Difundimos su propiedad en <strong>más de 30 portales inmobiliarios</strong> líderes, asegurando una visibilidad máxima.</li>
+                            <li><strong>Difusión Estratégica:</strong> Utilizamos nuestras redes sociales, base de datos de clientes y red de contactos para llegar a compradores calificados.</li>
+                            <li><strong>Metodología de Venta Internacional:</strong> Aumentamos la probabilidad de cierre mostrando más de una propiedad al comprador, una técnica de venta de eficacia probada.</li>
+                            <li><strong>Visitas Organizadas:</strong> Coordinamos visitas guiadas y "open houses" para presentar el inmueble de la mejor manera.</li>
+                        </ul>`
+                },
+                'step-4': {
+                    title: '4. Gestión de Interesados y Negociación',
+                    content: `
+                        <ul class="list-disc list-inside space-y-3 text-stone-700">
+                            <li><strong>Filtrado de Compradores:</strong> Precalificamos a los interesados para asegurar que solo compradores serios y con capacidad de compra visiten su propiedad.</li>
+                            <li><strong>Coordinación de Visitas:</strong> Gestionamos la agenda de visitas de forma eficiente y profesional, con un seguimiento constante.</li>
+                            <li><strong>Negociación Experta:</strong> Recibimos y negociamos las ofertas en su nombre, buscando siempre las mejores condiciones para usted.</li>
+                        </ul>`
+                },
+                'step-5': {
+                    title: '5. Cierre de la Venta',
+                    content: `
+                        <ul class="list-disc list-inside space-y-3 text-stone-700">
+                            <li><strong>Asesoría en Contrato:</strong> Le acompañamos y asesoramos durante la firma del contrato de compraventa para garantizar su seguridad y tranquilidad.</li>
+                            <li><strong>Tramitación de Estudio de Título:</strong> Gestionamos este trámite crucial para validar la situación legal del inmueble.</li>
+                            <li><strong>Acompañamiento Final:</strong> Estamos a su lado hasta el último momento: la firma de la escritura y la entrega de las llaves.</li>
+                        </ul>`
+                },
+                'step-6': {
+                    title: '6. Postventa',
+                    content: `
+                        <ul class="list-disc list-inside space-y-3 text-stone-700">
+                            <li><strong>Seguimiento de Satisfacción:</strong> Nuestro compromiso no termina con la venta. Nos contactamos posteriormente para verificar su completa satisfacción con nuestro servicio.</li>
+                            <li><strong>Relación a Largo Plazo:</strong> Quedamos a su disposición para futuras necesidades inmobiliarias, buscando construir una relación de confianza duradera.</li>
+                        </ul>`
+                }
+            };
+
+            const steps = document.querySelectorAll('.process-step');
+            const detailsContainer = document.getElementById('details-container');
+
+            function updateDetails(stepId) {
+                const data = serviceData[stepId];
+                detailsContainer.style.opacity = 0;
+                
+                setTimeout(() => {
+                    detailsContainer.innerHTML = `
+                        <h3 class="text-2xl font-bold text-[#225479] mb-4">${data.title}</h3>
+                        ${data.content}
+                    `;
+                    detailsContainer.style.opacity = 1;
+                }, 300);
+
+                steps.forEach(s => {
+                    s.classList.remove('process-step-active');
+                });
+                document.getElementById(stepId).classList.add('process-step-active');
+            }
+            
+            steps.forEach(step => {
+                step.addEventListener('click', () => {
+                    updateDetails(step.id);
+                });
+            });
+
+            updateDetails('step-1');
+        });
+    </script>
+</body>
+</html>
